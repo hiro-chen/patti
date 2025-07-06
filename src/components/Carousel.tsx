@@ -7,27 +7,30 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
+const prefix = process.env.NODE_ENV === "production" ? "/patti" : "";
+
 const slides = [
   {
     title: "夢想變理想",
-    image: "/images/IMG_3866.jpg",
+    // image: "/images/IMG_3866.jpg",
+    image: `${prefix}/images/IMG_3866.jpg`,
     href: "https://soler.com.tw/stranger-meetups/",
   },
-  {
-    title: "打造你的支援技能",
-    image: "/images/IMG_3726.jpg",
-    href: "https://soler.com.tw/tokyonomadcafe/",
-  },
-  {
-    title: "以終為始",
-    image: "/images/IMG_9107.jpg",
-    href: "https://soler.com.tw/tokyo-selectshop/",
-  },
-  {
-    title: "優雅地做自己想做的事情",
-    image: "/images/IMG_9987.jpg",
-    href: "https://soler.com.tw/mbti_city/",
-  },
+  // {
+  //   title: "打造你的支援技能",
+  //   image: "/images/IMG_3726.jpg",
+  //   href: "https://soler.com.tw/tokyonomadcafe/",
+  // },
+  // {
+  //   title: "以終為始",
+  //   image: "/images/IMG_9107.jpg",
+  //   href: "https://soler.com.tw/tokyo-selectshop/",
+  // },
+  // {
+  //   title: "優雅地做自己想做的事情",
+  //   image: "/images/IMG_9987.jpg",
+  //   href: "https://soler.com.tw/mbti_city/",
+  // },
 ];
 
 export default function Carousel() {

@@ -1,5 +1,5 @@
 // src/app/page.tsx
-import { Hero } from "../components/Hero";
+// import { Hero } from "../components/Hero";
 import { TopicNav } from "../components/TopicNav";
 import { CardGrid } from "../components/CardGrid";
 import Carousel from "../components/Carousel";

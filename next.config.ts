@@ -8,13 +8,16 @@
 
 
 // next.config.ts
-/** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
   output: 'export',
-  basePath: '/patti', // 將這行設為你的 repo 名稱
   images: {
-    unoptimized: true, // GitHub Pages 不支援 next/image 優化
+    unoptimized: true,
   },
+  basePath: isProd ? '/patti' : '',
+  assetPrefix: isProd ? '/patti/' : '',
 };
 
 export default nextConfig;
+
