@@ -3,7 +3,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
-import Image from "next/image";
+// import Image from "next/image";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
@@ -13,26 +13,25 @@ const slides = [
   {
     title: "夢想變理想",
     // image: "/images/IMG_3866.jpg",
-    image: `${prefix}/out/images/IMG_3866.jpg`,
+    image: `${prefix}/images/IMG_3866.jpg`,
     href: "https://soler.com.tw/stranger-meetups/",
   },
-  // {
-  //   title: "打造你的支援技能",
-  //   image: "/images/IMG_3726.jpg",
-  //   href: "https://soler.com.tw/tokyonomadcafe/",
-  // },
-  // {
-  //   title: "以終為始",
-  //   image: "/images/IMG_9107.jpg",
-  //   href: "https://soler.com.tw/tokyo-selectshop/",
-  // },
-  // {
-  //   title: "優雅地做自己想做的事情",
-  //   image: "/images/IMG_9987.jpg",
-  //   href: "https://soler.com.tw/mbti_city/",
-  // },
+  {
+    title: "打造你的支援技能",
+    image: `${prefix}/images/IMG_3726.jpg`,
+    href: "https://soler.com.tw/tokyonomadcafe/",
+  },
+  {
+    title: "以終為始",
+    image: `${prefix}/images/IMG_9107.jpg`,
+    href: "https://soler.com.tw/tokyo-selectshop/",
+  },
+  {
+    title: "優雅地做自己想做的事情",
+    image: `${prefix}/images/IMG_9987.jpg`,
+    href: "https://soler.com.tw/mbti_city/",
+  },
 ];
-
 export default function Carousel() {
   return (
     <div className="w-full h-[80vh] relative">
@@ -46,13 +45,10 @@ export default function Carousel() {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div className="relative w-full h-full">
-              <Image
+              <img
                 src={slide.image}
                 alt={slide.title}
-                layout="fill"
-                objectFit="cover"
-                priority
-                className="brightness-90"
+                className="object-cover w-full h-full brightness-90"
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <a
@@ -69,6 +65,43 @@ export default function Carousel() {
     </div>
   );
 }
+
+// export default function Carousel() {
+//   return (
+//     <div className="w-full h-[80vh] relative">
+//       <Swiper
+//         modules={[Autoplay, EffectFade]}
+//         effect="fade"
+//         autoplay={{ delay: 3000, disableOnInteraction: false }}
+//         loop
+//         className="w-full h-full"
+//       >
+//         {slides.map((slide, index) => (
+//           <SwiperSlide key={index}>
+//             <div className="relative w-full h-full">
+//               <Image
+//                 src={slide.image}
+//                 alt={slide.title}
+//                 layout="fill"
+//                 objectFit="cover"
+//                 priority
+//                 className="brightness-90"
+//               />
+//               <div className="absolute inset-0 flex items-center justify-center">
+//                 <a
+//                   href={slide.href}
+//                   className="text-white text-2xl md:text-4xl font-semibold bg-black/40 px-6 py-4 rounded-lg hover:bg-black/60 transition"
+//                 >
+//                   {slide.title}
+//                 </a>
+//               </div>
+//             </div>
+//           </SwiperSlide>
+//         ))}
+//       </Swiper>
+//     </div>
+//   );
+// }
 
 // "use client";
 
