@@ -13,7 +13,7 @@ const slides = [
   {
     title: "夢想變理想",
     // image: "/images/IMG_3866.jpg",
-    image: `${prefix}/images/IMG_3866.jpg`,
+    image: `${prefix}/public/images/IMG_3866.jpg`,
     href: "https://soler.com.tw/stranger-meetups/",
   },
   // {
