@@ -1,11 +1,19 @@
+// export default function Carousel() {
+//   return (
+//     <div className="bg-black text-white w-full h-[80vh] flex items-center justify-center text-3xl">
+//       Carousel is working: {slides[0].title}
+//     </div>
+//   );
+// }
+
 // src/components/Carousel.tsx
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade } from "swiper/modules";
-// import Image from "next/image";
-import "swiper/css";
-import "swiper/css/effect-fade";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Autoplay, EffectFade } from "swiper/modules";
+// // import Image from "next/image";
+// import "swiper/css";
+// import "swiper/css/effect-fade";
 
 const prefix = process.env.NODE_ENV === "production" ? "/patti" : "";
 
@@ -34,37 +42,46 @@ const slides = [
 ];
 export default function Carousel() {
   return (
-    <div className="w-full h-[80vh] relative">
-      <Swiper
-        modules={[Autoplay, EffectFade]}
-        effect="fade"
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        loop
-        className="w-full h-full"
-      >
-        {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
-            <div className="relative w-full h-full">
-              <img
-                src={slide.image}
-                alt={slide.title}
-                className="object-cover w-full h-full brightness-90"
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <a
-                  href={slide.href}
-                  className="text-white text-2xl md:text-4xl font-semibold bg-black/40 px-6 py-4 rounded-lg hover:bg-black/60 transition"
-                >
-                  {slide.title}
-                </a>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <div className="bg-black text-white w-full h-[80vh] flex items-center justify-center text-3xl">
+      Carousel is working: {slides[0].title}
     </div>
   );
 }
+// export default function Carousel() {
+//   return (
+//     <div className="w-full h-[80vh] relative">
+//       <Swiper
+//         modules={[Autoplay, EffectFade]}
+//         effect="fade"
+//         autoplay={{ delay: 3000, disableOnInteraction: false }}
+//         loop
+//         className="w-full h-full"
+//       >
+//         {slides.map((slide, index) => (
+//           <SwiperSlide key={index}>
+//             <div className="relative w-full h-full">
+//               <img
+//                 src={slide.image}
+//                 alt={slide.title}
+//                 className="object-cover w-full h-full brightness-90"
+//               />
+//               <div className="absolute inset-0 flex items-center justify-center">
+//                 <a
+//                   href={slide.href}
+//                   className="text-white text-2xl md:text-4xl font-semibold bg-black/40 px-6 py-4 rounded-lg hover:bg-black/60 transition"
+//                 >
+//                   {slide.title}
+//                 </a>
+//               </div>
+//             </div>
+//           </SwiperSlide>
+//         ))}
+//       </Swiper>
+//     </div>
+//   );
+// }
+
+
 
 // export default function Carousel() {
 //   return (
